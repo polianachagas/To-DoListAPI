@@ -1,4 +1,4 @@
-package com.polianachagas.todolist.Model;
+package com.polianachagas.todolist.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

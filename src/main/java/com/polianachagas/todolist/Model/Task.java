@@ -1,4 +1,4 @@
-package com.polianachagas.todolist.Model;
+package com.polianachagas.todolist.model;
 
 import java.time.LocalDate;
 
