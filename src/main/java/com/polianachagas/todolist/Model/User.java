@@ -1,8 +1,5 @@
 package com.polianachagas.todolist.Model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -16,6 +13,7 @@ public class User {
 	private String username;
 	private String email;
 	private String password;
+	
 	public Long getId() {
 		return id;
 	}
