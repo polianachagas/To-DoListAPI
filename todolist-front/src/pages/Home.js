@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import '../styles/Home.css';
 import axios from 'axios';
-import '../imgs/check.png';
-
 
 export default function Home() {
 
+    //show
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
@@ -22,6 +21,34 @@ export default function Home() {
         
     }
 
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth();
+    const year = now.getFullYear();
+    const today = `${year}-${month}-${day}`;
+
+    //add
+    const [task, addTask] = useState({
+        description: "",
+        completed: ""
+    });
+
+    const{description, completed} = task;
+
+    const onInputChange=(e) => {
+        addTask({...task, [e.target.name]: e.target.value});
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post("http://localhost:8080/tasks", task);
+            loadTasks();
+        } catch (error) {
+            console.error("Error adding the task: ", error);
+        }
+    }
+
     return (
         <div className='container'>
 
@@ -29,13 +56,24 @@ export default function Home() {
                 <img src='/imgs/to-do-list.png'></img>
                 <h1>To-Do List</h1>
             </div>
-            
+        
             <div className='task-container'> 
 
-                <div className='filter-add'>
-                    <input placeholder="Type to add or filter"></input>
-                    <img src='/imgs/add.png'></img>
-                </div> 
+            <form onSubmit={(e) => onSubmit(e)}>
+                <div className="filter-add">
+                    <input
+                        placeholder="Type to add or filter"
+                        type="text"
+                        className="form-control"
+                        name="description"
+                        value={description}
+                        onChange={(e) => onInputChange(e)}
+                    />
+                    <button type="submit">
+                        <img  src="/imgs/add.png" alt="Add Task" />
+                    </button>
+                </div>
+            </form>
             
                 <table>
                     <thead>

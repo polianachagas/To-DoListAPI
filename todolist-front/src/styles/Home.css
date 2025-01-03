@@ -11,7 +11,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     height: 100vh;
     color: #773344;
@@ -26,6 +26,7 @@ body {
 
 .header img {
     width: 80px;
+    cursor: default;
 }
 
 h1 {
@@ -46,11 +47,15 @@ h1 {
     
 }
 
+form {
+    width: 80%;
+}
+
 .filter-add {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    margin-bottom: 10px;
 }
 
 .filter-add img {
@@ -90,4 +95,9 @@ img {
 img:hover {
     background-color: #789e20;
     border-radius: 5px;
+}
+
+button {
+    background: none;
+    border: none;
 }
