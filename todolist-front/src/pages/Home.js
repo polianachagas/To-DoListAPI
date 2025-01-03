@@ -49,6 +49,32 @@ export default function Home() {
         }
     }
 
+    //edit
+    /*const onEdit = async(e) => {
+        e.preventDefault();
+        await axios.put(`http://localhost:8080/tasks/${id}`, task);
+        loadTasks();
+    }*/
+
+        const onEdit = async(taskId, updatedTask) => {
+            try {
+                await axios.put(`http://localhost:8080/tasks/${taskId}`, updatedTask);
+                loadTasks();
+            } catch (error) {
+                console.error("Error updating the task ", error);
+            }
+        }
+
+    //delete
+    const onDelete = async(taskId) => {
+        try {
+            await axios.delete(`http://localhost:8080/tasks/${taskId}`);
+            loadTasks();
+        } catch (error) {
+            console.error("Error deleting the task: ", error);
+        }
+    }
+
     return (
         <div className='container'>
 
@@ -93,8 +119,8 @@ export default function Home() {
                                 <td className='completed'>{task.completed ? "Completed" : "Pending"}</td> 
                                 <td>
                                     <img src='/imgs/check.png'></img>
-                                    <img src='/imgs/edit.png'></img>
-                                    <img src='/imgs/delete.png'></img>
+                                    <button onClick={()=> onEdit(task.id, { ...task, description: "Updated Task" })}><img src='/imgs/edit.png'></img></button>
+                                    <button onClick={()=> onDelete(task.id)}><img src='/imgs/delete.png'></img></button>
                                 </td>
                             </tr>
                             ))
