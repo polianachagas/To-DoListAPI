@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+.dongle-regular {
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-signup {
+    background-color: #789E20;
+    height: 100vh;
+
+    font-family: "Dongle", serif;
+    color: #FAFFFD;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-content {
+    background-color: #773344;
+    border: 3px solid #fafffdd2;
+    height: 500px;
+    width: 30%;
+
+    border-radius: 10px;
+    margin: -10px 10px 10px 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+}
+
+.signup input {
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.signup .signup-btn {
+    background-color: #789E20;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: "Dongle", serif;
+    color: #FAFFFD;
+}
+
+.signup .signup-btn:hover {
+    background-color: #4f6816;
+    color: #aeb1b0;
+}
+
+.signup {
+    margin-top: 10px;
+}
+
+.signup-btn {
+    color: #FAFFFD;
+    font-size: 28px;
+}
+

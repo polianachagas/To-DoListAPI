@@ -1,20 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #789e20;
+    
     height: 100vh;
 }
 
-.container {
+.dongle-regular {
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-home {
+    background-color: #789e20;
+    height: 100vh;
+}
+  
+.content {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
-    height: 100vh;
     color: #773344;
+    margin-bottom: 10px;
+    font-family: "Dongle", serif;
 }
 
 .header {
@@ -25,13 +38,13 @@ body {
 }
 
 .header img {
-    width: 80px;
+    width: 60px;
     cursor: default;
 }
 
-h1 {
+.title {
     color: #FAFFFD;
-    font-size: 48px;
+    font-size: 54px;
 }
 
 .task-container {
@@ -39,6 +52,8 @@ h1 {
     border: 3px solid #FAFFFD;
     padding: 15px;
     border-radius: 5px;
+    
+    width: 80%;
 
     display: flex;
     flex-direction: column;
@@ -51,14 +66,21 @@ form {
     width: 80%;
 }
 
-.filter-add {
+.add {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.filter-add img {
+.add input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.add img {
     width: 25px;
     background-color: #789e204b;
     padding: 5px;
@@ -66,23 +88,53 @@ form {
     border: 1px solid black;
 }
 
-input {
-    padding: 10px;
-    width: 100%;
-    border-radius: 10px;
-    border: none;
+thead, tbody {
+    display: block;
 }
 
-th {
-    font-size: 24px;
+thead th {
+    padding-left: 90px;
+    font-size: 36px;
+}
+
+tbody {
+    overflow-y: scroll;
+    height: 310px;
+}
+
+tbody input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+tr.completed {
+    text-decoration: line-through;
+    color: #2A3D45;
+}
+
+tr.pending {
+    text-decoration: none;
+}
+
+tr input {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #485f13;
+    border-radius: 5px;
 }
 
 td {
-    font-size: 20px;
+    font-size: 32px;
 }
 
 th, td {
-    padding: 5px 25px;
+    padding: 5px 50px;
 }
 
 img {
@@ -100,4 +152,17 @@ img:hover {
 button {
     background: none;
     border: none;
+}
+
+footer {
+    display: flex;
+    font-family: "Dongle", serif;
+    justify-content: center;
+    background-color: #8edd6957;
+}
+
+a {
+    text-decoration: none;
+    color: #2A3D45;
+    font-size: 20px;
 }

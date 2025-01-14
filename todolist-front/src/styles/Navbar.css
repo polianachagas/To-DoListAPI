@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+.dongle-regular {
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: #156064;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+
+    color: #FAFFFD;
+    font-family: "Dongle", serif;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+}
+
+.navbar .btn-login {
+    font-family: "Dongle", serif;
+    color: #FAFFFD; 
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+.navbar .btn-login:hover {
+    background-color: #2a3d4559;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.navbar .btn-logout {
+    font-family: "Dongle", serif;
+    color: #FAFFFD; 
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+.navbar .btn-logout:hover {
+    background-color: #2a3d4559;
+    cursor: pointer;
+    border-radius: 10px;
+}
